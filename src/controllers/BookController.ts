@@ -19,7 +19,7 @@ class BookController {
     console.log("BookController");
 
     try {
-      const book = await this.bookService.getById(req.params.id);
+      const book = await this.bookService.getById(Number(req.params.id));
       res.send({ status: "OK", data: book });
     } catch (error) {
       res.status(500).send({ status: "Failed", message: error });
