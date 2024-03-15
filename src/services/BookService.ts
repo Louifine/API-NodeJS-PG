@@ -22,7 +22,7 @@ class BookService {
     //   `INSERT INTO book (title) VALUES ('${book.title}');`
     // );
     const newBook = this.bookRepository.create(book);
-    return this.bookRepository.save(book);
+    return this.bookRepository.save(newBook);
   }
   async update(id: string, book: Book) {
     console.log("BookService");
